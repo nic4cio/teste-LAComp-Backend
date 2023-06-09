@@ -1,4 +1,4 @@
-import { Controller } from "@nestjs/common"
+import { Body, Controller, Get, Post } from "@nestjs/common";
 
 @Controller('/news')
 export class NewsController {
