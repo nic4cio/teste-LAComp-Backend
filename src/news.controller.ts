@@ -4,7 +4,7 @@ import { Body, Controller, Get, Post } from "@nestjs/common";
 export class NewsController {
 
     @Post()
-    async createNews() {
-        return 'notícia criada!';
+    async createNews(@Body() dadosDoNews) {
+        return dadosDoNews;
     }
 }
