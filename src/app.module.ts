@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { NewsController } from './news.controller';
+import { NewsModule } from './news/news.module';
 
 @Module({
-  imports: [],
-  controllers: [NewsController],
+  imports: [NewsModule],
+  controllers: [],
   providers: [],
 })
 export class AppModule {}
