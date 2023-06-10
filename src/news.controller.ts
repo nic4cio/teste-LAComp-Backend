@@ -11,4 +11,9 @@ export class NewsController {
         this.newsRepository.salvar(dadosDoNews);
         return dadosDoNews;
     }
+
+    @Get()
+    async listNews() {
+        return this.newsRepository.listar()
+    }
 }

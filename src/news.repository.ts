@@ -3,6 +3,9 @@ export class NewsRepository {
 
     async salvar(news) {
         this.news.push(news);
-        console.log(this.news);
+    }
+
+    async listar() {
+        return this.news;
     }
 }
