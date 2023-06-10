@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Post } from "@nestjs/common";
 import { NewsRepository } from "./news.repository";
+import { CriaNewsDTO } from "./dto/CriaNews.dto";
 
 @Controller('/news')
 export class NewsController {
@@ -7,7 +8,7 @@ export class NewsController {
     constructor(private newsRepository: NewsRepository) {}
 
     @Post()
-    async createNews(@Body() dadosDoNews) {
+    async createNews(@Body() dadosDoNews: CriaNewsDTO) {
         this.newsRepository.salvar(dadosDoNews);
         return dadosDoNews;
     }
