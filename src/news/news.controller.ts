@@ -4,7 +4,7 @@ import { NewsRepository } from "./news.repository";
 @Controller('/news')
 export class NewsController {
 
-    private newsRepository = new NewsRepository();
+    constructor(private newsRepository: NewsRepository) {}
 
     @Post()
     async createNews(@Body() dadosDoNews) {
